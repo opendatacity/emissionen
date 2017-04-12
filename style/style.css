@@ -1,0 +1,299 @@
+@import url(//fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i|PT+Sans|PT+Sans:b);
+
+body {
+	background: #ffffff;
+	color: #333;
+	font-family: "PT Sans", serif;
+	position: relative;
+	font-size: 1em;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 700;
+	margin: .3em 0 .1em 0;
+	color: #0069B4;
+	text-rendering: optimizeLegibility;
+}
+
+h1 sub {
+	font-size: 12px;
+}
+
+.h2 {
+	font-family: "PT Sans";
+	font-size: 1em;
+	text-rendering: optimizeLegibility;
+}
+
+
+
+.description {
+	color: #000;
+}
+
+h1, h2 {
+
+}
+
+h1 ~ aside {
+	font-size: small;
+	right: 0;
+	position: absolute;
+	width: 180px;
+	color: #0069B4;
+}
+
+
+/* chart */
+
+
+.axis path, .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+
+#chart {
+	background: #fff;
+}
+
+text {
+	pointer-events: none;
+}
+
+.topLevelTrigger text {
+	font-weight: bold;
+}
+
+rect {
+	fill: none;
+	stroke: #fff;
+}
+
+rect.parent,
+.topLevelTrigger rect {
+	stroke-width: 2px;
+}
+
+.topLevelTrigger rect {
+	fill: #006bb3;
+}
+
+.topLevelTrigger text{
+	fill: #dddddd;
+}
+
+.topLevelTrigger:hover rect {
+	fill: #006bb3;
+}
+
+.children rect.parent,
+.topLevelTrigger rect {
+	cursor: pointer;
+}
+
+.children rect.parent {
+/*	fill: #bbb;
+	fill-opacity: .5;*/
+}
+
+.children:hover rect.parent {
+	fill: #bbb;
+	fill-opacity: .3;
+}
+
+.children:hover rect.child {
+	fill-opacity: .3;
+}
+
+/* tooltip */
+
+#tooltip {
+	position: absolute;
+	width: 220px;
+	height: auto;
+	padding: 10px;
+	background-color: white;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	pointer-events: none;
+}
+
+#tooltip.hidden {
+	display: none;
+}
+
+#tooltip p {
+	margin: 0;
+	font-size: 1em;
+	line-height: 20px;
+}
+
+
+/* colors */
+
+.one {
+	fill: #2166AC;
+	background-color: #2166AC;
+}
+
+.two {
+	fill: #5F9FCA;
+	background-color: #5F9FCA;
+}
+
+.three {
+	fill: #B4CAE7;
+	background-color: #B4CAE7;
+}
+
+.four {
+	fill: #E8EFEC;
+	background-color: #E8EFEC;
+}
+
+.five {
+	fill: #FBEADA;
+	background-color: #FBEADA;
+}
+
+.six {
+	fill: #FBC4A9;
+	background-color: #FBC4A9;
+}
+
+.seven {
+	fill: #E77C5A;
+	background-color: #E77C5A;
+}
+
+.eight {
+	fill: #B2182B;
+	background-color: #B2182B;
+}
+
+.neutral{
+	fill: #aaaaaa;
+	background-color: #aaaaaa;
+}
+
+@media only screen and (min-width: 560px) {
+	#default-scale{
+		display: block;
+	}
+
+	#mobile-scale{
+		display: none;
+	}
+
+
+
+}
+
+@media only screen and (max-width: 559px) {
+	#default-scale{
+		display: none;
+	}
+
+	#mobile-scale{
+		display: inline;
+	}
+
+	#tooltip{
+		display: none;
+	}
+}
+
+
+
+/* map legend */
+.scale {
+	max-width: 480px;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	height: 40px;
+	float: left;
+}
+
+td.step{
+	width: 20px;
+}
+
+.scale .scale_title{
+	font-size: 1em;
+	line-height: 1.8em;
+	font-weight: bold;
+}
+
+.scale .step{
+	display: inline-block;
+	height: 11px;
+	width: 60px;
+	margin: 0;
+	margin-right: -4px;
+	padding: 0;
+}
+
+.scale .sticker{
+	position: absolute;
+	border-left: 1px solid #000;
+	height: 15px;
+}
+
+.scale .sticker .value{
+	width: 100px;
+	position: absolute;
+	left: -50px;
+	text-align: center;
+	top: 16px;
+	font-size: 11px;
+}
+
+
+
+/* share */
+
+.share{
+	float: right;
+
+}
+
+
+/* copyright / source */
+.copyright{
+	float:right;
+	margin-top: 10px;
+}
+
+.source{
+	float:left;
+	margin-top: 28px;
+}
+
+/* embed */
+
+.embed{
+	clear: both;
+	margin-top: 100px;
+	margin-bottom: 30px;
+	word-wrap: break-word;
+	overflow: scroll;
+}
+
+#embedHowTo{
+	margin-bottom: 5px;
+}
+
+code{
+	background-color: #dddddd;
+	padding: 20px;
+	float: left;
+}
+
